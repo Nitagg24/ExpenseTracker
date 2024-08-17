@@ -94,14 +94,20 @@ const Main = () => {
       : localStorage.setItem("expenseList", JSON.stringify([...allData]));
 
     let map1 = new Map();
+    let map2 = new Map();
     for (let i = 0; i < allData.length; i++) {
       if (map1.has(allData[i].category)) {
         map1.set(
           allData[i].category,
           Number(map1.get(allData[i].category)) + Number(allData[i].price)
         );
+        map2.set(
+          allData[i].category,
+          Number(map2.get(allData[i].category)) + Number(allData[i].price)
+        );
       } else {
         map1.set(allData[i].category, Number(allData[i].price));
+        map2.set(allData[i].category, allData[i].price);
       }
     }
 
@@ -110,10 +116,26 @@ const Main = () => {
     let entertainmentAmt = map1.get("entertainment") || 0;
 
     setCategories([
-      { name: "travel", value: travelAmt },
-      { name: "entertainment", value: entertainmentAmt },
-      { name: "food", value: foodAmt },
+      { name: "Travel", value: travelAmt },
+      { name: "Entertainment", value: entertainmentAmt },
+      { name: "Food", value: foodAmt },
     ]);
+    let tp = map2.get("travel");
+    let fp = map2.get("food");
+    let ep = map2.get("entertainment");
+    if (tp > 0 || fp > 0 || ep > 0) {
+      setCatPrice([
+        { name: "Entertainment", amt: ep },
+        { name: "Travel", amt: tp },
+        { name: "Food", amt: fp },
+      ]);
+    } else {
+      setCatPrice([
+        { name: "travel", amt: 0 },
+        { name: "entertainment", amt: 0 },
+        { name: "food", amt: 0 },
+      ]);
+    }
   }, [allData]);
 
   return (

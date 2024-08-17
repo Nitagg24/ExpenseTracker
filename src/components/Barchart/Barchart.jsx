@@ -1,12 +1,5 @@
 import React, { useContext } from "react";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-} from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import { context } from "../Main/Main";
 
 export default function Barchart() {
@@ -14,34 +7,21 @@ export default function Barchart() {
 
   return (
     <BarChart
-      width={450}
-      height={300}
+      width={417}
+      height={250}
       data={catPrice}
       layout="vertical"
-      margin={{
-        top: 0,
-        right: 20,
-        left: 20,
-        bottom: 0,
-      }}
       barSize={20}
+      margin={{ left: 20}}
     >
-      <CartesianGrid strokeDasharray="3 3" horizontal={false} />
       <XAxis
         type="number"
         axisLine={false}
-        tickLine={false}
-        hide
+        display="none"
+        padding={{ left: 5, right: 5 }}
       />
-      <YAxis 
-        type="category" 
-        dataKey="name" 
-        axisLine={false} 
-        tickLine={false} 
-        width={100}
-      />
-      <Tooltip cursor={{ fill: 'transparent' }} />
-      <Bar dataKey="amt" fill="#8884d8" radius={[10, 10, 10, 10]} />
+      <YAxis type="category" width={100} dataKey="name" axisLine={false} />
+      <Bar dataKey="amt" fill="#8884d8" />
     </BarChart>
   );
 }

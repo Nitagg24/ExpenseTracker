@@ -37,7 +37,7 @@ const Piechart = () => {
     <PieChart
       width={300}
       height={200}
-      margin={{ top: -95, right: 5, bottom: 0, left: -30 }}
+      margin={{ top: -95, right: 5, bottom: -10, left: -30 }}
     >
       <Pie
         data={categories}
