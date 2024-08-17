@@ -131,9 +131,9 @@ const Main = () => {
       ]);
     } else {
       setCatPrice([
-        { name: "travel", amt: 0 },
-        { name: "entertainment", amt: 0 },
-        { name: "food", amt: 0 },
+        { name: "Entertainment", amt: 0 },
+        { name: "Travel", amt: 0 },
+        { name: "Food", amt: 0 },
       ]);
     }
   }, [allData]);
