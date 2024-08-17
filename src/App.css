@@ -1,0 +1,33 @@
+.App {
+  /* border: .5px solid red; */
+  height: 97vh;
+  width: 100%;
+  padding: 0 1rem;
+}
+#h1{
+  color: #FFFFFF;
+  margin-top: 0;
+  letter-spacing: .2rem;
+}
+ @media (max-width:950px) {
+  .App{
+    width:100%;
+  }
+  
+ }
+@media (max-width:475px){
+  .App{
+    width:100%;
+    height: auto;
+    /* scroll-margin-left: none; */
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
+@media (max-width:431px){
+   .App{
+    width:100%;
+    /* height: auto; */
+   }
+
+}

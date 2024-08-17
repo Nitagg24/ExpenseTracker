@@ -1,0 +1,29 @@
+.topexpense{
+    width:38%;
+    height: 100%;
+    /* border: 1px solid paleturquoise; */
+    
+}
+.expenseProgress{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    height: 85%;
+   
+}
+
+#heading{
+    text-align: start;
+    margin-top: .3rem;
+    font-family: "Ubuntu";
+    font-weight: 700;
+    font-style: italic;
+    color:white;
+    
+}
+@media(max-width:950px){
+    .topexpense{
+        /* height: 50%; */
+        width:100%
+    }
+
+}

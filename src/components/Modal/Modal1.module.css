@@ -1,0 +1,98 @@
+.modalWrapper{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color:#FFFFFF;
+    opacity: .6;
+    /* color: white; */
+    padding: 3rem;
+    /* z-index: 1; */
+  }
+  
+.modalContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #EFEFEF;
+    width: 30%;
+    padding: 2rem;
+   
+    border-radius: 12px;
+    /* z-index: 1; */
+  
+  }
+  .form{
+    display: flex;
+    gap: 2rem;
+  }
+
+  .addBtn{
+    width:50%;
+    padding:.7rem 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #F4BB4A;
+  }
+  .cancel{
+    width: 35%;
+    border-radius: 12px;
+    padding: .7rem 1rem; 
+    border: none;
+    background-color: rgb(212, 208, 208);
+    box-shadow: 0 0 10px rgba(0,0,10,.5);
+  }
+  h1{
+    color: black;
+  }
+.btns{
+  width:70%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+
+}
+  .ip{
+    border: none;
+    /* outline: none; */
+    padding: .8rem;
+    background-color: azure;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(133, 136, 136, 0.5);
+}
+.ip:focus{
+    border: none;
+    outline: none;
+}
+
+@media (max-width:475px){
+  .form{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .modalContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #EFEFEF;
+    width: 50%;
+    padding: 2rem;
+   
+    border-radius: 12px;
+    /* z-index: 1; */
+  
+  }
+  .btns{
+    width: 100%;
+  }
+
+   .addBtn{
+    width:50%;
+   }
+   .cancel{
+    width: 30%;
+   }
+}

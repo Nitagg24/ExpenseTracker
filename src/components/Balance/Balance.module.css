@@ -1,0 +1,45 @@
+.balance{
+    /* border: 1px solid rgb(72, 231, 72); */
+    width:45%;
+    height: 100%;
+    background-color: #9B9B9B;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+}
+.incomeBtn{
+    padding:.7rem 1.8rem;
+    border-radius:15px;
+    background-image: linear-gradient( to right,#B5DC52,#89E148);
+    color: #FFFFFF;
+    border: none;
+    
+}
+.showtxt{
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+#showrate{
+    color: #B5DC52;
+
+}
+/* @media (max-width:950px){
+    .balance{
+        width: 45%;
+        height: 100%;
+    }
+} */
+@media (max-width:475px){
+    .balance{
+        width: 100%;
+        min-height: 40%;
+        /* padding: 2rem; */
+        /* box-sizing: border-box; */
+    }
+    .incomeBtn{
+        margin-bottom: 1rem;
+    }
+}

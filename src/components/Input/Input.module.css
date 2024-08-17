@@ -1,0 +1,12 @@
+.ip{
+    border: none;
+    /* outline: none; */
+    padding: .8rem;
+    background-color: azure;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(133, 136, 136, 0.5);
+}
+.ip:focus{
+    border: none;
+    outline: none;
+}
